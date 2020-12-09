@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+
+
+/* keyframes */
+@keyframes arrow {
+    from { transform: translateY(-12px); }
+    to { transform: translateY(12px); opacity: 0; }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* ZSRCKU */
+.zsrcku {
+    position: fixed;
+    font-size: 0.7em;
+    left: -2.3em;
+    border-radius: 7px 7px 0 0;
+    background: #fafafa;
+    color: #2c2c2c;
+    box-shadow: 0 2px 100px 2px #646464;
+    padding: 1em 1.5em;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    z-index: 99;
+    transition: box-shadow .1s;
+}
+
+.zsrcku:hover {
+    left: -2.2em;
+    box-shadow: 0 5px 70px 15px #646464;
+}
+
+/* HERO */
+
+.hero {
+    position: relative;
+    margin-top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    background: url("/img/hero.jpg");
+    filter: brightness(95%) blur(2px);
+    background-size: cover;
+    background-position: center center;
+    height: calc(100% + 11px);
+    width: calc(100% + 9px);
+    z-index: -1;
+}
+
+.nav {
+    width: 100%;
+    margin-top: 3.5em;
+    height: 4.3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.button-list {
+    margin-right: 5em;
+}
+
+.button-item {
+    position: relative;
+    color: #fdfdfd;
+    border: solid 1px #fdfdfd;
+    font-size: 1em;
+    margin: -3px;
+    text-transform: uppercase;
+    padding: 1.5em 2em;
+}
+
+.button-item:hover {
+    color: #2c2c2c;
+}
+
+.button-item:hover::before {
+    transform: translateY(-100%);
+}
+
+.button-item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:100%;
+    background-color: #fdfdfd;
+    transition: transform .3s;
+    transition-timing-function: ease-out;
+    z-index: -1;
+}
+
+.button-item:nth-of-type(even)::before {
+    background-color: #2c2c2c;
+    top: -100%;
+}
+
+.button-item:nth-of-type(even):hover {
+    color: #d8d8d8;
+}
+
+.button-item:nth-of-type(even):hover::before {
+    transform: translateY(100%);
+}
+
+.container {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 5em;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.title p {
+    font-family: 'Nanum Brush Script', cursive;
+    font-weight: bold;
+    font-size: 5em;
+    transform: rotate(-4deg);
+    color: white;
+}
+
+.arrow {font-size: 3.2em;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #cccccc;
+    animation: arrow 3s ease-in-out infinite;
+}
+
+.arrow:hover {
+    color: #9b9b9b;
+}
+
+/* Article */
+
+.article {
+    width: 100%;
+    min-height: 70vh;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+}
+
+.article-container {
+    padding: 10em 0 8em 0;
+    height: 100%;
+    width: 55%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.texturina {
+    font-family: 'Texturina', serif;
+}
+
+.article-wrapper {
+    width: 50%;
+    font-family: 'Texturina', serif;
+}
+
+.article-title {
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.article-text {
+    margin-top: 2.5em;
+}
+
+.img-wrapper {
+    position: relative;
+    display: block;
+}
+
+.img-pr {
+    padding-right: 2em;
+}
+
+.img-wrapper[title]::before {
+    content: attr(title);
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: bold;
+    position: absolute;
+    color: rgb(102, 102, 102);
+    transform-origin:0 0;
+    top:0;
+    left: -1em;
+    transform: rotate(90deg);
+}
+
+.img-inner {
+    height: 100%;
+    overflow: hidden;
+}
+
+.article-img {
+    transition: transform 5s ease-out;
+}
+
+.article-img:hover {
+    transform: scale(1.1);
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    color: #2c2c2c;
+    border: solid 1px #2c2c2c;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 1.2em 2em;
+    overflow: hidden;
+    z-index: 1;
+    bottom: -20%;
+}
+
+.button:hover {
+    color: #dddddd;
+}
+
+.button:hover::before {
+    transform: translateY(-100%);
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 5px);
+    height: 100%;
+    left:0;
+    top:100%;
+    background-color: #2c2c2c;
+    transition: transform .3s ease-out;
+    z-index: -1;
+}
+
+/* Media partners */
+
+.media-partners {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 3em 0;
+    background: #eeeeee;
+
+}
+
+.a-title {
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Cabin', sans-serif;
+    padding-bottom: 2em;
+}
+
+.a-title::before {
+    content: '';
+    position: absolute;
+    background: #9b9b9b;
+    width: 15em;
+    height: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+}
+
+.a-title::after {
+    content: '';
+    position: absolute;
+    background: #3a3a3a;
+    width: 3.5em;
+    height: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 29px
+}
+
+.mp-graphics {
+    margin-top: 4em;
+}
+
+.mp-graphics-item {
+    margin-left: 6em;
+}
+
+.mp-graphics-item:first-child {
+    margin-left: 0;
+}
+
+.mp-graphics-item img {
+    transition: transform .2s;
+}
+
+.mp-graphics-item img:hover {
+    transform: scale(1.04) rotate(-4deg);
+}
+
+/* Small gallery??? */
+
+.gallery {
+    width: 65%;
+    margin: 0 auto 0 auto;
+    padding-top: 3em;
+}
+
+.g-title {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 400;
+    margin: 1.5em auto 0 auto;
+}
+
+.f-d-c {
+    flex-direction: column;
+}
+
+.b-g {
+    margin: -4em auto 4em auto;
+}
+
+.gw {
+    height: 520px;
+}

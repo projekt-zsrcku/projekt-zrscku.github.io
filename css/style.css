@@ -341,7 +341,7 @@ body {
 /* Small gallery??? */
 
 .gallery {
-    width: 67%;
+    width: 68%;
     margin: 0 auto 0 auto;
     padding-top: 3em;
 }
@@ -350,10 +350,6 @@ body {
     font-family: 'Cabin', sans-serif;
     font-weight: 400;
     margin: 1.5em auto 0 auto;
-}
-
-.f-d-c {
-    flex-direction: column;
 }
 
 .b-g {

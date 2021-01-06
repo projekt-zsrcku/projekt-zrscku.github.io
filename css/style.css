@@ -180,6 +180,7 @@ body {
     background-color: #fafafa;
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .article-container {
@@ -280,11 +281,13 @@ body {
 
 .media-partners {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     padding: 3em 0;
     background: #eeeeee;
+    overflow: hidden;
 
 }
 
@@ -344,6 +347,7 @@ body {
     width: 68%;
     margin: 0 auto 0 auto;
     padding-top: 3em;
+    overflow: hidden;
 }
 
 .g-title {

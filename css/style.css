@@ -497,4 +497,8 @@ body {
     {
         transform: translate(-50%, 0);
     }
+
+    #img1 {
+        display: none;
+    }
 }

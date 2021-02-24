@@ -113,7 +113,8 @@ img, video {
 }
 
 .button-list {
-    margin-right: 2em;
+    width: 40vw;
+    margin-right: -7em;
 }
 
 .button-item {
@@ -160,41 +161,46 @@ img, video {
 .container {
     min-height: 50vh;
     width: 70vw;
-    margin: 7em auto 10em auto
+    margin: 0 auto 10em auto
 }
 
-.img-wrapper {
-    position: relative;
-    display: block;
+.article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.img-pr {
-    padding-right: 2em;
+.a-title {
+  position: relative;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Cabin', sans-serif;
+  padding-bottom: 2em;
 }
 
-.img-wrapper[title]::before {
-    content: attr(title);
-    text-transform: uppercase;
-    font-size: 0.7em;
-    font-weight: bold;
-    position: absolute;
-    color: rgb(102, 102, 102);
-    transform-origin:0 0;
-    top:0;
-    left: -1em;
-    transform: rotate(90deg);
+.a-title::before {
+  content: '';
+  position: absolute;
+  background: #9b9b9b;
+  width: 15em;
+  height: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
 }
 
-.img-inner {
-    height: 100%;
-    overflow: hidden;
+.a-title::after {
+  content: '';
+  position: absolute;
+  background: #3a3a3a;
+  width: 3.5em;
+  height: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 29px
 }
 
-
-.article-img {
-    transition: transform 5s ease-out;
-}
-
-.article-img:hover {
-    transform: scale(1.1);
+p {
+  width: 80%;
+  margin-bottom: 7em;
 }
